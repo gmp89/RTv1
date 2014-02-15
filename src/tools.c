@@ -6,7 +6,7 @@
 /*   By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/11 13:58:11 by gpetrov           #+#    #+#             */
-/*   Updated: 2014/02/14 21:18:46 by gpetrov          ###   ########.fr       */
+/*   Updated: 2014/02/15 19:11:53 by gpetrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,14 @@ void	ft_struct_init(t_data *d)
 	d->ray->origin = (t_pos *)malloc(sizeof(t_pos));
 	d->ray->dir = (t_pos *)malloc(sizeof(t_pos));
 	d->light = (t_pos *)malloc(sizeof(t_pos));
+	d->light_color = (t_pos *)malloc(sizeof(t_pos));
+	d->impact = (t_pos *)malloc(sizeof(t_pos));
+	d->distance = (t_pos *)malloc(sizeof(t_pos));
+	d->ray_light_dist = (t_pos *)malloc(sizeof(t_pos));
+	d->ray_light_dir = (t_pos *)malloc(sizeof(t_pos));
+	d->intensity = (t_pos *)malloc(sizeof(t_pos));
+	d->light_vec = (t_pos *)malloc(sizeof(t_pos));
+	d->tmp = (t_pos *)malloc(sizeof(t_pos));
 }
 
 void	ft_swap_pos(t_pos *a, t_pos *b)

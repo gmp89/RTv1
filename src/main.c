@@ -6,7 +6,7 @@
 /*   By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/11 12:39:02 by gpetrov           #+#    #+#             */
-/*   Updated: 2014/02/14 21:12:06 by gpetrov          ###   ########.fr       */
+/*   Updated: 2014/02/15 19:48:51 by gpetrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	set_sphere(t_data *d)
 {
-	d->obj->x = SIZE_WINX / 2;
-	d->obj->y = SIZE_WINY / 2;
-	d->obj->z = MAX_Z / 2;
+	d->obj->x = 0;
+	d->obj->y = 0;
+	d->obj->z = 0;
 	d->obj->radius = 200;
 	d->is_sphere = 1;
+	d->result = 20000;
 }
 
 int		main(void)

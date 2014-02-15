@@ -6,7 +6,7 @@
 /*   By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 15:40:37 by gpetrov           #+#    #+#             */
-/*   Updated: 2014/02/14 16:39:04 by gpetrov          ###   ########.fr       */
+/*   Updated: 2014/02/14 21:33:33 by gpetrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,13 @@ t_pos	*ft_vector_substract(t_pos *a, t_pos *b)
 	result->x = a->x - b->x;
 	result->y = a->y - b->y;
 	result->z = a->z - b->z;
+	return (result);
+}
+
+double	ft_vector_dot(t_pos *a, t_pos *b)
+{
+	double	result;
+
+	result = (a->x * b->x) + (a->y * b->y) + (a->z * b->z);
 	return (result);
 }

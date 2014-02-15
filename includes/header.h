@@ -6,7 +6,7 @@
 /*   By: gpetrov <gpetrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/11 12:39:46 by gpetrov           #+#    #+#             */
-/*   Updated: 2014/02/14 21:14:53 by gpetrov          ###   ########.fr       */
+/*   Updated: 2014/02/15 19:22:16 by gpetrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ typedef struct		s_cam
 
 typedef struct		s_data
 {
+	double			result;
+	double			result2;
 	int				is_sphere;
 	int				i;
 	t_cam			*cam;
@@ -72,6 +74,14 @@ typedef struct		s_data
 	t_pos			*ray_dir;
 	t_pos			*ray;
 	t_pos			*light;
+	t_pos			*light_color;
+	t_pos			*impact;
+	t_pos			*distance;
+	t_pos			*ray_light_dist;
+	t_pos			*ray_light_dir;
+	t_pos			*intensity;
+	t_pos			*light_vec;
+	t_pos			*tmp;
 }					t_data;
 
 /*
@@ -110,5 +120,6 @@ t_pos	*ft_vect_normalize(t_pos *vector);
 t_pos	*ft_vector_scalar(t_pos *a, t_pos *b);
 t_pos	*ft_vector_copy(t_pos *vector);
 t_pos	*ft_vector_substract(t_pos *a, t_pos *b);
+double	ft_vector_dot(t_pos *a, t_pos *b);
 
 #endif
